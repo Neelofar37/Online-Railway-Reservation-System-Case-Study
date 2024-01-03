@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe4e1;
+            /* Misty Rose background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #payment-container {
+            background-color: #ffb6c1;
+            /* Light Pink container */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #e75480;
+            /* Pink text color */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+            font-weight: bold;
+            color: #ff69b4;
+            /* Hot Pink label text color */
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(100% - 20px);
+            border: 1px solid #db7093;
+            /* Pale Violet Red border */
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #ff1493;
+            /* Deep Pink button color */
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #c71585;
+            /* Darker Medium Violet Red on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="payment-container">
+        <h2>Payment</h2>
+        <form action="payment_process.php" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" name="cvc" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+</body>
+
+</html>
